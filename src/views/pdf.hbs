@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <title>CISTEC</title>
+  <script>
+    function generatePDF() {
+      // Choose the element that our invoice is rendered in.
+      const element = document.getElementById("certificate");
+      var opt = {
+        filename:     'certificado_cistec.pdf',
+        html2canvas:  { scale: 1 },
+        image:        { type: 'jpeg', quality: 0.98 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+      };
+      // New Promise-based usage:
+      html2pdf().set(opt).from(element).save();
+
+    }
+  </script>
+</head>
+<body>
+<div id="certificate">
+  <header>
+    <div class="container custom-header">
+      <div class="col-md-2 logo-header-one"><img src="../icon/band_logo.jpeg"></div>
+      <div class="col-md-10 logo-header-two"><img src="../icon/autonoma_logo.jpeg"></div>
+    </div>
+  </header>
+  <div class="container certificate-body">
+    <p class="title-certificate"> Certifica que </p>
+    <p class="name-certificate"> {{ fullName }} </p>
+    <p class="status-certificate"> Ha aprobado satisfactoriamente el curso de: </p>
+    <p class="course-certificate"> {{ courseName }} </p>
+    <p class="time-certificate"> Realizado en el Centro de aprendizaje disruptivo - FUTURE
+      de la Universidad Autónoma del Perú, con una duración de
+
+      {{ courseTime }} horas académicas. </p>
+    <p class="date-certificate">Lima, 13 de Julio, 2021.</p>
+    <div class="col-md-6 signature"><img src="../icon/signature_one.png"></div>
+    <div class="col-md-6 signature"><img src="../icon/signature_two.png"></div>
+  </div>
+  <div class="html2pdf__page-break"></div>
+  <div class="container certificate-body student-information">
+    <h3>INFORMACIÓN DEL ESTUDIANTE</h3>
+    <p> Periodo: {{ period }}</p>
+    <p> Promedio: {{ average }}</p>
+    <p> Estado: {{ state }}</p>
+    <br><br><br>
+    <p> Codigo de certificado CISTEC: {{ certificateNumber }}</p>
+    <p> Hash de tu certificado en la blockchain: {{ contractAddress }}</p>
+  </div>
+</div>
+<div class="container certificate-body">
+  <button class="btn-download" onclick="generatePDF()">Descarga como PDF</button>
+</div>
+</body>
+</html>

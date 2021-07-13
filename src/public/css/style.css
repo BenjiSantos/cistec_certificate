@@ -1,0 +1,234 @@
+.custom-header .logo-header-one img {
+    height: 300px;
+    width: 200px;
+    width: 100%;
+}
+
+.custom-header .logo-header-two img {
+    margin-top: 70px;
+    margin-left: 20px;
+    width: 80%;
+}
+
+.certificate-body {
+    text-align: center;
+    width: 800px !important;
+}
+
+.btn-download {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.btn-download:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.title-certificate {
+    color: #f18c18;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.name-certificate {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.status-certificate {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.course-certificate {
+    font-size: 22px;
+    font-weight: 500;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-bottom: 15px;
+}
+
+.time-certificate {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.date-certificate {
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.signature img {
+    width: 280px;
+    height: 180px;
+}
+
+*, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.form-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.form-holder .form-content {
+    position: relative;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.form-content .form-items {
+    border: 3px solid #fff;
+    padding: 40px;
+    display: inline-block;
+    width: 100%;
+    min-width: 540px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: left;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.form-content h3 {
+    color: #fff;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+    margin-bottom: 30px;
+}
+
+.form-content p {
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+
+.form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
+    color: #fff;
+}
+
+.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content input[type=date], .form-content select {
+    width: 100%;
+    padding: 9px 20px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+
+.btn-primary{
+    background-color: #6C757D;
+    outline: none;
+    border: 0px;
+    box-shadow: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active{
+    background-color: #495056;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+.form-content textarea {
+    position: static !important;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8D8D8D;
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+}
+
+.form-content textarea:hover, .form-content textarea:focus {
+    border: 0;
+    background-color: #ebeff8;
+    color: #8D8D8D;
+}
+
+.mv-up{
+    margin-top: -9px !important;
+    margin-bottom: 8px !important;
+}
+
+.invalid-feedback{
+    color: #ff606e;
+}
+
+.valid-feedback{
+    color: #2acc80;
+}
+
+.form-body {
+    background-color: #36312e;
+    background-image: url(https://www.autonoma.pe/wp-content/themes/autonomaweb/assets/images/point_38_vf.svg);
+    background-position: 50% 50%;
+    background-size: 25px;
+    background-repeat: repeat;
+}
+
+.student-information p {
+    font-size: 20px;
+}
